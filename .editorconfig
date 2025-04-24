@@ -1,0 +1,57 @@
+# .editorconfig для проекта на Golang
+root = true
+
+# Общие настройки для всех файлов
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 2
+
+# Настройки для Go файлов
+[*.go]
+indent_style = tab
+indent_size = 4
+
+# Настройки для go.mod и go.sum
+[{go.mod,go.sum}]
+indent_style = tab
+indent_size = 4
+
+# Настройки для Task
+[{Taskfile.yaml,taskfile.yaml}]
+indent_style = space
+indent_size = 2
+
+# Настройки для Docker-файлов
+[Dockerfile]
+indent_style = space
+indent_size = 2
+
+# Настройки для Docker Compose
+[compose.yaml]
+indent_style = space
+indent_size = 2
+
+# Настройки для Markdown-файлов
+[*.md]
+trim_trailing_whitespace = false
+indent_style = space
+indent_size = 2
+
+# Настройки для JSON файлов
+[*.json]
+indent_style = space
+indent_size = 2
+
+# Настройки для YAML файлов
+[*.{yaml,yml}]
+indent_style = space
+indent_size = 2
+
+# Настройки для shell скриптов
+[*.sh]
+indent_style = space
+indent_size = 2
