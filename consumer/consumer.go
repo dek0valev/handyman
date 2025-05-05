@@ -131,12 +131,12 @@ func (c *Consumer) handleHoroscopeAudio(update telegram.Update) error {
 
 	horoscopesResponse, err := c.openaiClient.GenerateResponse(prompt, transcription)
 	if err != nil {
-		log.Fatalf("Error generating response: %v", err)
+		return err
 	}
 
 	var horoscopes []entities.Horoscope
 	if err := json.Unmarshal([]byte(horoscopesResponse), &horoscopes); err != nil {
-		log.Fatalf("Error unmarshalling response: %v", err)
+		return err
 	}
 
 	loc := time.FixedZone("UTC+07:00", 7*60*60)
